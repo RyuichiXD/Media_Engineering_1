@@ -1,0 +1,104 @@
+#wrapper {
+}
+body {
+}
+header,footer {
+    margin: 0 auto;
+    width: 1000px;
+    font-weight: normal;
+    text-decoration: underline overline;
+    color: #000000;
+    letter-spacing: 5pt;
+    word-spacing: 3pt;
+    font-size: 32px;
+    text-align: left;
+    font-family: arial, helvetica, sans-serif;
+    line-height: 1;
+}
+.footerPos{
+    position:absolute;
+    bottom: 0;
+}
+/*.buttonNav{
+}*/
+form {
+    width: 30em;
+}
+label.h2 {
+    font-weight: bold;
+    font-size: 150%;
+    width: 100%;
+    margin-bottom: 1em;
+}
+label.h3 {
+    font-weight: bold;
+    font-size: 120%;
+    width: 100%;
+    margin-bottom: 1em;
+}
+label {
+    float: left;
+    width: 40%;
+}
+input {
+    margin: 0 0 1em .2em;
+    padding: .2em .5em;
+    background-color: #fffbf0;
+    border: 1px solid #e7c157;
+}
+label.input {
+    text-align: right;
+    line-height: 1.5;
+}
+/*
+label.input::after {
+    content: ": ";
+}
+*/
+.button {
+    margin-top: 1.5em;
+    width: 30%;
+}
+p {
+    padding: 10px;
+}
+.tg {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: none #bbb;
+}
+.tg td {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    padding: 10px 5px;
+    overflow: hidden;
+    word-break: normal;
+    border: 0px solid #bbb;
+    color: #594F4F;
+    background-color: #E0FFEB;
+}
+.tg th {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 10px 5px;
+    overflow: hidden;
+    word-break: normal;
+    border: 0px solid #bbb;
+    color: #493F3F;
+    background-color: #9DE0AD;
+}
+.table {
+
+    position: absolute;
+    width: 250px;
+    height: 175px;
+    top: 165px;
+    left: 450px;
+}
+.buttonsGroup{
+    position: absolute;
+    width: 250px;
+    height: 175px;
+    top: 550px;
+}
