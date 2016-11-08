@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Dein Aufenthalt</title>
+</head>
+<body>
+
+<div class="travelform">
+    <form id="travelInfo" action="" autocomplete="on">
+        <label class="h2" form="travelInfo">Gib deine Reisedaten ein!</label><br><br>
+
+        <label for="city">Land:</label>
+        <br><input type="text" name="country" id="city" maxlength="30" pattern="[A-Za-z]" required><br>
+
+        <label for="country">Stadt:</label>
+        <br><input type="text" name="city" id="country" maxlength="40" pattern="[A-Za-z]" required><br><br>
+
+        <label for="fromDate">Von:</label>
+        <br><input type="date" name="fromDate" id="fromDate"autocomplete="off" required><br>
+
+        <label for="tilDate">Bis:</label>
+        <br><input type="date" name="tilDate" id="tilDate"autocomplete="off" required><br><br>
+
+        <label for="email">E-mail:</label>
+        <br><input type="email" name="email" id="email" maxlength="40" autocomplete="off"><br><br>
+
+        <label for="userNotes">Notizen</label><br>
+        <textarea name="userNotes" id="userNotes" placeholder="Deine Momente" rows="15" cols="50"></textarea><br>
+
+        <p><input type="submit" name="submit" value="Zu der Sammlung hinzufügen"/></p>
+
+    </form>
+</div>
+
+</body>
+</html>
