@@ -1,0 +1,50 @@
+
+// Vermeidet das Javascript vorm DOM laden, ausgeführt wird
+window.addEventListener("load", function(event) {
+
+
+    var inputFromDate = document.getElementById('fromDate');
+    var inputTilDate = document.getElementById('tilDate'),
+        inputEmail = document.getElementById('email');
+
+    inputTilDate.addEventListener("change", tilDateCheck, false);
+
+    inputFromDate.addEventListener("change", FromDateCheck, false);
+
+    function tilDateCheck() {
+        if (inputTilDate.value < inputFromDate.value ) {
+            document.getElementById('tilDateCheck').innerHTML = "Bis Datum ist kleiner als Von Datum";
+        }
+        else
+            {
+                document.getElementById('tilDateCheck').innerHTML = "";
+                document.getElementById('fromDateCheck').innerHTML = "";
+            }
+    }
+
+    function FromDateCheck() {
+        if (inputFromDate.value > inputTilDate.value ) {
+            document.getElementById('fromDateCheck').innerHTML = "Von Datum ist größer als Bis Datum";
+        }
+        else
+            {
+                document.getElementById('tilDateCheck').innerHTML = "";
+                document.getElementById('fromDateCheck').innerHTML = "";
+            }
+    }
+
+    inputEmail.onchange = function () {
+        if(inputEmail.value.endsWith("@beuth-hochschule.de"))
+        {
+            document.getElementById('emailCheck').innerHTML = "";
+        }
+        else
+        {
+            document.getElementById('emailCheck').innerHTML = "Email muss mit @beuth-hochschule.de enden";
+        }
+    };
+
+
+
+
+});
