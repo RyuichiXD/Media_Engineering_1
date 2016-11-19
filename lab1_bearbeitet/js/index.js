@@ -1,4 +1,4 @@
-function hhh(){
+function initCities(){
     mapAddress('map1', 'berlin');
     mapAddress('map2', 'minsk');
     mapAddress('map3', 'saransk');
