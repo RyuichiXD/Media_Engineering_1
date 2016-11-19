@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <link href="css/style.css" rel="stylesheet">
     <script type="text/javascript" src="js/index.js"></script>
+
+    </body>
     <title>Travelmap</title>
 </head>
 <body>
+<div id="floating-panel">
+    <input id="address" type="textbox" value="">
+    <input id="submit" type="button" value="Geocode">
+</div>
+
+
 <header>
    Travelmap
 </header>
@@ -61,29 +69,15 @@
             </td>
 
             <td class="c3">
-                <p id="googleMap"></p>
-                <script>
-                    var map;
-                function initMap() {
-
-                    map = new google.maps.Map(document.getElementById('googleMap'), {
-                        center: {lat: -34.397, lng: 150.644},
-                        zoom: 8
-                    });
-                }
-                </script>
-                <script async defer
-                        src="https://maps.googleapis.com/maps/api/js?key= AIzaSyBQyMdvT-Yld9Pcfe1_O9Mqsulrst4mVIE&callback=initMap">
-                </script>
+                <p id="map1"></p>
                 <p> Moskau</p>
             </td>
 
-            <td class class="c4">
+            <td class="c4">
                 <button onclick="" class="deleteBtn"></button>
                 <p></p>
                 <button onclick="" class="editBtn"></button>
             </td>
-
         </tr>
         <tr>
             <td colspan="4" class="notizen">
@@ -121,11 +115,11 @@
             </td>
 
             <td class="c3">
-                <p class="map"></p>
+                <p id="map2"></p>
                 <p> Moskau</p>
             </td>
 
-            <td class class="c4">
+            <td class="c4">
                 <button onclick="" class="deleteBtn"></button>
                 <p></p>
                 <button onclick="" class="editBtn"></button>
@@ -166,11 +160,11 @@
             </td>
 
             <td class="c3">
-                <p class="map"></p>
+                <p id="map3"></p>
                 <p> Moskau</p>
             </td>
 
-            <td class class="c4">
+            <td class="c4">
                 <button onclick="" class="deleteBtn"></button>
                 <p></p>
                 <button onclick="" class="editBtn"></button>
@@ -211,11 +205,11 @@
             </td>
 
             <td class="c3">
-                <p class="map"></p>
+                <p id="map4"> </p>
                 <p> Moskau</p>
             </td>
 
-            <td class class="c4">
+            <td class="c4">
                 <button onclick="" class="deleteBtn"></button>
                 <p></p>
                 <button onclick="" class="editBtn"></button>
@@ -256,11 +250,11 @@
             </td>
 
             <td class="c3">
-                <p class="map"></p>
+                <p id="map5"></p>
                 <p> Moskau</p>
             </td>
 
-            <td class class="c4">
+            <td class="c4">
                 <button onclick="" class="deleteBtn"></button>
                 <p></p>
                 <button onclick="" class="editBtn"></button>
@@ -282,19 +276,17 @@
                     et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
             </td>
         </tr>
-
-
-
-
-
-
-
 
     </table>
 </div>
 <footer>
     Beuth Hochschule
 </footer>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAstxTeR26LIW7T2Jce4SZ-K3ZbRDJ_pQA&callback=hhh"
+async defer></script>
+
 </body>
 
 </html>
