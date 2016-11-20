@@ -1,6 +1,5 @@
-
 // Vermeidet das Javascript vorm DOM laden, ausgeführt wird
-window.addEventListener("load", function(event) {
+window.addEventListener("load", function (event) {
 
 
     var inputFromDate = document.getElementById('fromDate');
@@ -12,39 +11,33 @@ window.addEventListener("load", function(event) {
     inputFromDate.addEventListener("change", FromDateCheck, false);
 
     function tilDateCheck() {
-        if (inputTilDate.value < inputFromDate.value ) {
+        if (inputTilDate.value < inputFromDate.value) {
             document.getElementById('tilDateCheck').innerHTML = "Bis Datum ist kleiner als Von Datum";
         }
-        else
-            {
-                document.getElementById('tilDateCheck').innerHTML = "";
-                document.getElementById('fromDateCheck').innerHTML = "";
-            }
+        else {
+            document.getElementById('tilDateCheck').innerHTML = "";
+            document.getElementById('fromDateCheck').innerHTML = "";
+        }
     }
 
     function FromDateCheck() {
-        if (inputFromDate.value > inputTilDate.value ) {
+        if (inputFromDate.value > inputTilDate.value) {
             document.getElementById('fromDateCheck').innerHTML = "Von Datum ist größer als Bis Datum";
         }
-        else
-            {
-                document.getElementById('tilDateCheck').innerHTML = "";
-                document.getElementById('fromDateCheck').innerHTML = "";
-            }
+        else {
+            document.getElementById('tilDateCheck').innerHTML = "";
+            document.getElementById('fromDateCheck').innerHTML = "";
+        }
     }
 
     inputEmail.onchange = function () {
-        if(inputEmail.value.endsWith("@beuth-hochschule.de"))
-        {
+        if (inputEmail.value.endsWith("@beuth-hochschule.de")) {
             document.getElementById('emailCheck').innerHTML = "";
         }
-        else
-        {
+        else {
             document.getElementById('emailCheck').innerHTML = "Email muss mit @beuth-hochschule.de enden";
         }
     };
-
-
 
 
 });

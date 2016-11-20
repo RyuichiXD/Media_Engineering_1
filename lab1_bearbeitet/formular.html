@@ -22,13 +22,17 @@
         <br><input type="text" name="city" id="country" maxlength="40" pattern="[A-Za-z]+" required><br><br>
 
         <label for="fromDate">Von:</label>
-        <br><input type="date" name="fromDate" id="fromDate"autocomplete="off" required><label class ="validationCheck" id="fromDateCheck" ></label><br>
+        <br><input type="date" name="fromDate" id="fromDate" autocomplete="off" required><label class="validationCheck"
+                                                                                                id="fromDateCheck"></label><br>
 
         <label for="tilDate">Bis:</label>
-        <br><input type="date" name="tilDate" id="tilDate"autocomplete="off" required><label class ="validationCheck" id="tilDateCheck" ></label><br><br>
+        <br><input type="date" name="tilDate" id="tilDate" autocomplete="off" required><label class="validationCheck"
+                                                                                              id="tilDateCheck"></label><br><br>
 
         <label for="email">E-mail:</label>
-        <br><input type="email" name="email" id="email" maxlength="40" autocomplete="off" pattern="/^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*"><label class ="validationCheck" id="emailCheck" ></label><br><br>
+        <br><input type="email" name="email" id="email" maxlength="40" autocomplete="off"
+                   pattern="/^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*"><label class="validationCheck"
+                                                                                              id="emailCheck"></label><br><br>
 
         <label for="userNotes">Notizen</label><br>
         <textarea name="userNotes" id="userNotes" placeholder="Deine Momente" rows="15" cols="50"></textarea><br>
@@ -39,12 +43,28 @@
 </div>
 <script>
 
+    Array.prototype.random = function () {
+        return this[Math.floor((Math.random() * this.length))];
+    }
+
+
+    var arrayCities = ["Berlin", "Moskau", "Istambul", "London", "123", "berlin", "asdasd", "sadasdasdasdadasdadasdasdasdasdasdasdaeqwdsadasdadaSDASDFSDFSFSDFSDFSDFASESF<WEWRESFRSDAF"];
+    var arrayCountries = ["Russland", "Deutschland", "Türkei", "21542", "sdlkjaslkjdaskljdalksjdalsdjalskjdalkjsdasjdakljsdaksjdaklsjdaklsjd"]
+    var arrayFromDate = ["2002-12-12", "1955-55-85", "2587-54-564", "sdad-asdsad-asd", "2002-10-10", "2015-13-25", "2002-11-11"];
+    var arrayTillDate = ["2002-12-12", "1955-55-85", "2587-54-564", "sdad-asdsad-asd", "2002-10-10", "2015-13-25", "2002-11-11"];
+    var arrayEmail = ["sdasdsadas", "asdasd@sdsd.dsds", "654rfdgfd", "test@test.de", "test1@test1.ru,11556@4456.25"];
+
+    console.log(arrayCities.random());
+
+
     fill = function () {
-        document.getElementById("city").value= "Berlin";
-        document.getElementById("country").value= "Deutschland";
-        document.getElementById("fromDate").value= "2002-12-12";
-        document.getElementById("tilDate").value= "2001-12-12";
-        document.getElementById("email").value= "eineCooleEmail@beuth-hochschule.de";
+
+        document.getElementById("city").value = arrayCities.random();
+        document.getElementById("country").value = arrayCountries.random();
+         document.getElementById("fromDate").value= arrayFromDate.random();
+        document.getElementById("fromDate").value = "2002-12-12";
+        document.getElementById("tilDate").value = arrayTillDate.random();
+        document.getElementById("email").value = arrayEmail.random();
     }
 
 </script>

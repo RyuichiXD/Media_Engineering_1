@@ -1,4 +1,4 @@
-function initCities(){
+function initCities() {
     mapAddress('map1', 'berlin');
     mapAddress('map2', 'minsk');
     mapAddress('map3', 'saransk');
@@ -8,11 +8,10 @@ function initCities(){
 }
 
 
-
 function mapAddress(mapElement, address) {
     var geocoder = new google.maps.Geocoder();
 
-    geocoder.geocode({ 'address': address }, function (results, status) {
+    geocoder.geocode({'address': address}, function (results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
             var mapOptions = {
                 zoom: 14,
