@@ -9,20 +9,14 @@
     <title>Travelmap</title>
 </head>
 <body>
-<div id="floating-panel">
-    <input id="address" type="textbox" value="">
-    <input id="submit" type="button" value="Geocode">
-</div>
-
-
 <header>
-   Travelmap
+    Travelmap
 </header>
 
 <nav id="menu">
     <img id="menuLogo" img src="./img/menu-icon.png"></img>
-	<ul>
-		<li><a href="#">Aktuelles</a></li>
+    <ul>
+        <li><a href="#">Aktuelles</a></li>
         <li><a href="#">Party-Kalender</a></li>
         <li><a href="#">Reiseübersicht</a></li>
         <li><a href="#">Länderübersicht</a></li>
@@ -42,7 +36,7 @@
 
     <script>
         function myFunction() {
-            window.open("formular.html", "_blank", "toolbar=no,scrollbars=yes,resizable=yes,top=50,left=500,width=420,height=600");
+            window.open("formular.html", "_blank", "toolbar=no,scrollbars=yes,resizable=yes,top=50,left=500,width=720,height=700");
         }
     </script>
 </div>
@@ -63,14 +57,14 @@
             <td class="c2">
                 <br><br>
                 <p class="c-flag">
-                    <img src="img/flags/64/RU.png"></br> Russland
+                    <img src="img/flags/64/de.png"></br> Deutschland
                 </p>
                 <p class="c-date">10.11.16 </br>-</br>28.11.16</p>
             </td>
 
             <td class="c3">
-                <p id="map1"></p>
-                <p> Moskau</p>
+                <p id="map1" class="map"></p>
+                <p> Berlin</p>
             </td>
 
             <td class="c4">
@@ -109,14 +103,14 @@
             <td class="c2">
 
                 <p class="c-flag">
-                    <img src="img/flags/64/RU.png"></br> Russland
+                    <img src="img/flags/64/BY.png"></br> Weißrussland
                 </p>
                 <p class="c-date">10.11.16 </br>-</br>28.11.16</p>
             </td>
 
             <td class="c3">
-                <p id="map2"></p>
-                <p> Moskau</p>
+                <p id="map2" class="map"></p>
+                <p> Minsk</p>
             </td>
 
             <td class="c4">
@@ -154,14 +148,14 @@
 
             <td class="c2">
                 <p class="c-flag">
-                    <img src="img/flags/64/RU.png"></br> Russland
+                    <img src="img/flags/64/DE.png"></br> Deutschland
                 </p>
                 <p class="c-date">10.11.16 </br>-</br>28.11.16</p>
             </td>
 
             <td class="c3">
-                <p id="map3"></p>
-                <p> Moskau</p>
+                <p id="map3" class="map"></p>
+                <p> Stuttgart</p>
             </td>
 
             <td class="c4">
@@ -199,14 +193,14 @@
 
             <td class="c2">
                 <p class="c-flag">
-                    <img src="img/flags/64/RU.png"></br> Russland
+                    <img src="img/flags/64/UA.png"></br> Ukraine
                 </p>
                 <p class="c-date">10.11.16 </br>-</br>28.11.16</p>
             </td>
 
             <td class="c3">
-                <p id="map4"> </p>
-                <p> Moskau</p>
+                <p id="map4" class="map"></p>
+                <p> Kiew</p>
             </td>
 
             <td class="c4">
@@ -244,14 +238,14 @@
 
             <td class="c2">
                 <p class="c-flag">
-                    <img src="img/flags/64/RU.png"></br> Russland
+                    <img src="img/flags/64/DE.png"></br> Deutschland
                 </p>
                 <p class="c-date">10.11.16 </br>-</br>28.11.16</p>
             </td>
 
             <td class="c3">
-                <p id="map5"></p>
-                <p> Moskau</p>
+                <p id="map5" class="map"></p>
+                <p> Dessau</p>
             </td>
 
             <td class="c4">
@@ -285,7 +279,7 @@
 
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAstxTeR26LIW7T2Jce4SZ-K3ZbRDJ_pQA&callback=initCities"
-async defer></script>
+        async defer></script>
 
 </body>
 

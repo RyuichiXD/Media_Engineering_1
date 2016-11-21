@@ -1,8 +1,8 @@
 function initCities() {
-    mapAddress('map1', 'berlin');
-    mapAddress('map2', 'minsk');
-    mapAddress('map3', 'saransk');
-    mapAddress('map4', 'kiew');
+    mapAddress('map1', 'Berlin');
+    mapAddress('map2', 'Minsk');
+    mapAddress('map3', 'Stuttgart');
+    mapAddress('map4', 'Kiew');
     mapAddress('map5', 'Dessau');
 
 }
@@ -28,5 +28,3 @@ function mapAddress(mapElement, address) {
         }
     });
 }
-
-
