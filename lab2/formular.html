@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="css/style.css" rel="stylesheet">
+    <script type="text/javascript" src="js/formular_validation.js"></script>
+
+    <title>Dein Aufenthalt</title>
+</head>
+<body>
+
+<div class="travelform">
+
+    <button id="btnfill" class="ControlBtn" onclick="fill()"> Daten Füllen</button>
+    <p></p>
+    <form id="travelInfo" action="saved.html" onsubmit="return validate(this)" method="post">
+        <label class="h2" form="travelInfo">Gib deine Reisedaten ein!</label><br><br>
+
+        <label for="country">Land:</label>
+        <br><input type="text" name="country" id="country">
+        <label class="validationCheck" id="countryCheck"></label><br>
+        <p></p>
+
+        <label for="city">Stadt:</label>
+        <br><input type="text" name="city" id="city">
+        <label class="validationCheck" id="cityCheck"></label><br>
+        <p></p>
+
+        <label for="fromDate">Von:</label>
+        <br><input type="text" name="fromDate" id="fromDate">
+        <label class="validationCheck" id="fromDateCheck"></label><br>
+        <p></p>
+        <label for="tilDate">Bis:</label>
+        <br><input type="text" name="tilDate" id="tilDate">
+        <label class="validationCheck" id="tilDateCheck"></label><br><br>
+
+        <label for="email">E-mail:</label>
+        <br><input type="email" name="email" id="email">
+        <label class="validationCheck" id="emailCheck"></label><br><br>
+
+        <label for="userNotes">Notizen</label><br>
+        <textarea name="userNotes" id="userNotes" placeholder="Deine Momente" rows="15" cols="50"></textarea><br>
+
+        <p><input type="submit" name="submit" class=ControlBtn" value="Zu der Sammlung hinzufügen"/></p>
+
+    </form>
+</div>
+
+</body>
+</html>

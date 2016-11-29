@@ -17,7 +17,7 @@
         <label class="h2" form="travelInfo">Gib deine Reisedaten ein!</label><br><br>
 
         <label for="city">Land:</label>
-        <br><input type="text" name="country" id="city" maxlength="30" pattern="[a-zA-ZäöüÄÖÜ]+" required>
+        <br><input type="text" name="country" id="city" maxlength="30" pattern="[a-zA-Z]+" required>
         <label class="validationCheck" id="cityCheck"></label><br>
         <p></p>
 
@@ -35,8 +35,8 @@
         <label class="validationCheck" id="tilDateCheck"></label><br><br>
 
         <label for="email">E-mail:</label>
-        <br><input type="email" name="email" id="email" maxlength="40" autocomplete="off"
-                   pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+">
+        <br><input type="email" name="email" id="email" maxlength="40" autocomplete="off" required
+                   pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+"/>
         <label class="validationCheck" id="emailCheck"></label><br><br>
 
         <label for="userNotes">Notizen</label><br>

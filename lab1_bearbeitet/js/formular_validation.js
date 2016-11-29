@@ -7,8 +7,8 @@ window.addEventListener("load", function (event) {
         }
 
 
-        var arrayCities = ["Berlin", "Moskau", "Istambul", "London", "123", "berlin", "asdasd", "sadasdasdasdadasdadasdasdasdasdasdasdaeqwdsadasdadaSDASDFSDFSFSDFSDFSDFASESF<WEWRESFRSDAF"];
-        var arrayCountries = ["Russland", "Deutschland", "Türkei", "21542", "sdlkjaslkjdaskljdalksjdalsdjalskjdalkjsdasjdakljsdaksjdaklsjdaklsjd"]
+        var arrayCities = ["Berlin", "Moskau", "Istanbul", "London", "123", "berlin", "asdasd", "sadasdasdasdadasdadasdasdasdasdasdasdaeqwdsadasdadaSDASDFSDFSFSDFSDFSDFASESF<WEWRESFRSDAF"];
+        var arrayCountries = ["Russland", "Deutschland", "England", "21542", "sdlkjaslkjdaskljdalksjdalsdjalskjdalkjsdasjdakljsdaksjdaklsjdaklsjd"]
         var arrayFromDate = ["2002-12-12", "1955-55-85", "2587-54-564", "sdad-asdsad-asd", "2002-10-10", "2015-13-25", "2002-11-11"];
         var arrayTillDate = ["2002-12-12", "1955-55-85", "2587-54-564", "sdad-asdsad-asd", "2002-10-10", "2015-13-25", "2002-11-11"];
         var arrayEmail = ["sdasdsadas", "test@beuth-hochschule.de", "test2@beuth-hochschule.de", "asdasd@sdsd.dsds", "654rfdgfd", "test@test.de", "test1@test1.ru,11556@4456.25"];
@@ -20,11 +20,11 @@ window.addEventListener("load", function (event) {
             inputCity = document.getElementById('city'),
             inputCountry = document.getElementById('country');
 
-        inputTilDate.addEventListener("change", tilDateChecking, false);
-        inputFromDate.addEventListener("change", FromDateChecking, false);
-        inputEmail.addEventListener("cnange", EmailChecking, false);
-        inputCity.addEventListener("cnange", cityChecking, false);
-        inputCountry.addEventListener("cnange", countryChecking, false);
+        inputTilDate.addEventListener("input", tilDateChecking, false);
+        inputFromDate.addEventListener("input", FromDateChecking, false);
+        inputEmail.addEventListener("input", EmailChecking, false);
+        inputCity.addEventListener("input", cityChecking, false);
+        inputCountry.addEventListener("input", countryChecking, false);
 
 
         function cityChecking() {
@@ -88,7 +88,7 @@ window.addEventListener("load", function (event) {
         function EmailChecking() {
 
             if (inputEmail.checkValidity() == false) {
-                document.getElementById('emailCheck').innerHTML = "Bitte E-Mail Adresse nach Muster ____ eingeben";
+                document.getElementById('emailCheck').innerHTML = "Bitte E-Mail Adresse nach Muster xxxx@yyy.zz eingeben";
 
             } else if (!(inputEmail.value.endsWith("@beuth-hochschule.de"))) {
                 document.getElementById('emailCheck').innerHTML = "Email muss mit @beuth-hochschule.de enden";
@@ -99,17 +99,6 @@ window.addEventListener("load", function (event) {
         }
 
 
-        /*inputEmail.onchange = function () {
-
-         if (inputEmail.value.endsWith("@beuth-hochschule.de")) {
-         document.getElementById('emailCheck').innerHTML = "";
-         }
-         else {
-         document.getElementById('emailCheck').innerHTML = "Email muss mit @beuth-hochschule.de enden";
-         }
-         };*/
-
-
         fill = function () {
 
             document.getElementById("city").value = arrayCities.random();
@@ -118,11 +107,13 @@ window.addEventListener("load", function (event) {
             document.getElementById("tilDate").value = arrayTillDate.random();
             document.getElementById("email").value = arrayEmail.random();
 
-            EmailChecking();
+
+
+            cityChecking();
+            countryChecking();
             FromDateChecking();
             tilDateChecking();
-            countryChecking();
-            cityChecking();
+            EmailChecking();
         }
     }
 );
