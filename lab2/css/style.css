@@ -5,6 +5,8 @@ html {
 
 }
 
+
+
 body {
     font-family: helvetica, arial, sans, sans-serif;
     font-size: 1.000em;
@@ -124,7 +126,7 @@ a:hover {
 }
 
 .username img {
-    height: 75px;
+    height: 30px;
 }
 
 /*.c-date {

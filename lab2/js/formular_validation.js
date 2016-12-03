@@ -27,8 +27,9 @@ window.addEventListener("load", function (event) {
             inputCity = document.getElementById('city'),
             inputCountry = document.getElementById('country');
 
-        var cityRegex = /^[a-zA-Z]{1,30}/;
-        var countryRegex = /^[a-zA-Z]{1,40}/;
+        var cityRegex = /^[a-zA-Z]+$/;
+        // var cityRegex = (/[0-9]+$/);
+        var countryRegex = /^^[a-zA-Z]+$/;// /^[a-zA-Z\D]{1,40}/
         var dateRegex = /(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))/;
         var emailRegex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+/;
 
@@ -40,17 +41,22 @@ window.addEventListener("load", function (event) {
         inputCountry.addEventListener("input", countryChecking, false);
 
 
-        function cityChecking() {
+        function notdigit() {
 
-            if (inputCity.value.match(cityRegex)) {
+        }
+
+
+        function cityChecking() {
+            console.log(inputCity.value.match(cityRegex))
+            if ((inputCity.value.match(cityRegex))) {
                 document.getElementById('cityCheck').innerHTML = "";//посмотреть что будет если только if без else
                 globalstate_city = true;
             } else {
-                document.getElementById('cityCheck').innerHTML = "city Reg not ok";
+                document.getElementById('cityCheck').innerHTML = "Bitte nur Buchstaben eingeben";
                 globalstate_city = false;
             }
             if (inputCity.value == "") {
-                document.getElementById('cityCheck').innerHTML = "Bitte etwas eingeben";
+                document.getElementById('cityCheck').innerHTML = "Bitte Stadt eingeben";
                 globalstate_city = false;
 
             }
@@ -62,11 +68,11 @@ window.addEventListener("load", function (event) {
                 document.getElementById('countryCheck').innerHTML = "";
                 globalstate_country = true;
             } else {
-                document.getElementById('countryCheck').innerHTML = "city Reg not ok";
+                document.getElementById('countryCheck').innerHTML = "Bitte nur Buchstaben eingeben";
                 globalstate_country = false;
             }
             if (inputCountry.value == "") {
-                document.getElementById('countryCheck').innerHTML = "Bitte etwas eingeben";
+                document.getElementById('countryCheck').innerHTML = "Bitte Land eingeben";
                 globalstate_country = false;
             }
         }
@@ -74,37 +80,57 @@ window.addEventListener("load", function (event) {
 
         function fromDateChecking() {
 
-            if (inputFromDate.value.match(dateRegex)) {
-                document.getElementById('fromDateCheck').innerHTML = "";
-                globalstate_from = true;
-            } else if (inputTilDate.value < inputFromDate.value) {
-                document.getElementById('fromDateCheck').innerHTML = "Bis Datum ist kleiner als Von Datum";
+
+            if (!inputFromDate.value.match(dateRegex)) {
+                document.getElementById('fromDateCheck').innerHTML = "Bitte Datum nach Format YYYY-MM-DD eingeben";
                 globalstate_from = false;
             } else {
-                document.getElementById('fromDateCheck').innerHTML = "Bitte Datum nach Format YYYY-MM-DD eingeben";
+                document.getElementById('fromDateCheck').innerHTML = "";
+                globalstate_from = true;
+            }
+            if (inputFromDate.value.match(dateRegex) && inputTilDate.value != "" && inputTilDate.value < inputFromDate.value) {
+                document.getElementById('fromDateCheck').innerHTML = "Bsi Datum ist kleiner als Von Datum";
                 globalstate_from = false;
             }
             if (inputFromDate.value == "") {
-                document.getElementById('fromDateCheck').innerHTML = "Bitte etwas eingeben";
+                document.getElementById('fromDateCheck').innerHTML = "Bitte von-Datum eingeben";
                 globalstate_from = false;
             }
+
+
+            /*if (inputFromDate.value.match(dateRegex)) {
+             document.getElementById('fromDateCheck').innerHTML = "";
+             globalstate_from = true;
+             } else {
+             document.getElementById('fromDateCheck').innerHTML = "Bitte Datum nach Format YYYY-MM-DD eingeben";
+             globalstate_from = false;
+             }
+             /!*  if (inputTilDate.value < inputFromDate.value){
+             document.getElementById('fromDateCheck').innerHTML = "Bsi Datum ist kleiner als Von Datum";
+             globalstate_from = false;
+             }*!/
+             if (inputFromDate.value == "") {
+             document.getElementById('fromDateCheck').innerHTML = "Bitte etwas eingeben";
+             globalstate_from = false;
+             }*/
         }
 
 
         function tilDateChecking() {
 
-            if (inputTilDate.value.match(dateRegex)) {
-                document.getElementById('tilDateCheck').innerHTML = "";
-                globalstate_til = true;
-            } else if (inputTilDate.value < inputFromDate.value) {
-                document.getElementById('tilDateCheck').innerHTML = "Bis Datum ist kleiner als Von Datum";
+            if (!inputTilDate.value.match(dateRegex)) {
+                document.getElementById('tilDateCheck').innerHTML = "Bitte Datum nach Format YYYY-MM-DD eingeben";
                 globalstate_til = false;
             } else {
-                document.getElementById('tilDateCheck').innerHTML = "Bitte Datum nach Format YYYY-MM-DD eingeben";
+                document.getElementById('tilDateCheck').innerHTML = "";
+                globalstate_til = true;
+            }
+            if (inputTilDate.value.match(dateRegex) && inputTilDate.value != "" && inputTilDate.value < inputFromDate.value) {
+                document.getElementById('tilDateCheck').innerHTML = "Bis Datum ist kleiner als Von Datum";
                 globalstate_til = false;
             }
             if (inputTilDate.value == "") {
-                document.getElementById('tilDateCheck').innerHTML = "Bitte etwas eingeben";
+                document.getElementById('tilDateCheck').innerHTML = "Bitte bis-Datum eingeben";
                 globalstate_til = false;
             }
         }
@@ -119,12 +145,9 @@ window.addEventListener("load", function (event) {
             if (!(inputEmail.value.endsWith("@beuth-hochschule.de"))) {
                 document.getElementById('emailCheck').innerHTML = "Email muss mit @beuth-hochschule.de enden";
                 globalstate_email = false;
-            } else if (!(inputEmail.value.endsWith("@beuth-hochschule.de"))) {
-                document.getElementById('emailCheck').innerHTML = "Bitte E-Mail Adresse nach Muster xxxx@yyy.zz eingeben";
-                globalstate_email = false;
             }
             if (inputEmail.value == "") {
-                document.getElementById('emailCheck').innerHTML = "Bitte etwas eingeben";
+                document.getElementById('emailCheck').innerHTML = "Bitte Email eingeben";
                 globalstate_email = false;
             }
 
@@ -139,14 +162,14 @@ window.addEventListener("load", function (event) {
          })();*/
 
 
-        fill = function () {
+       /* fill = function () {*/
 
+            function fill() {
             document.getElementById("city").value = arrayCities.random();
             document.getElementById("country").value = arrayCountries.random();
             document.getElementById("fromDate").value = arrayFromDate.random();
             document.getElementById("tilDate").value = arrayTillDate.random();
             document.getElementById("email").value = arrayEmail.random();
-
 
             cityChecking();
             countryChecking();
@@ -156,7 +179,7 @@ window.addEventListener("load", function (event) {
         }
     }
 );
-
+//fondation
 function validate(form) {
 
 
