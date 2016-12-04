@@ -646,7 +646,7 @@ section.module.parallax-3 {
 
 #sidebar { width: 190px;
 	position: fixed;
-	left: 82%;
+	left: 95%;
 	top: 400px;
 	margin: 0 0 0 110;
 	display: none;
@@ -684,13 +684,13 @@ section.module.parallax-3 {
 .scrollToTop{
 	width:100px;
 	height:130px;
-	padding:10px;
+	padding:3px;
 	text-align:center;
 	font-weight: bold;
 	color: #444;
 	position:fixed;
-	top:900px;
-	right:40px;
+	top:600px;
+	right:5px;
 	display:none;
 }
 .scrollToTop:hover{

@@ -171,21 +171,15 @@ window.addEventListener("load", function (event) {
             document.getElementById("email").value = arrayEmail.random();
 
 
-
             cityChecking();
             countryChecking();
-            FromDateChecking();
+            fromDateChecking();
             tilDateChecking();
-            EmailChecking();
+            emailChecking();
         }
     }
 );
 
-
-
-
-
-//fondation
 function validate(form) {
 
 
