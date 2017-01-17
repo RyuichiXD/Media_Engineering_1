@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TravelMap">
+    <meta name="author" content="Samed Sulanc, Wadim Lewin">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+    <title> TravelMap</title>
+
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/icomoon.css">
+    <link href="assets/css/animate-custom.css" rel="stylesheet">
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet'
+          type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="assets/js/index.js"></script>
+    <script type="text/javascript" src="assets/js/example.js"></script>
+    <script type="text/javascript" src="assets/js/formular_validation.js"></script>
+    <script type="text/javascript" src="assets/js/ajaxData.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAstxTeR26LIW7T2Jce4SZ-K3ZbRDJ_pQA&"></script>
+
+</head>
+
+<body data-spy="scroll" data-offset="0" data-target="#navbar-main">
+
+<div id="navbar-main">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon icon-road" style="font-size:30px; color:#3498db;"></span>
+                </button>
+                <a class="navbar-brand hidden-xs hidden-sm" href="#home"><span class="icon icon-road"
+                                                                               style="font-size:18px; color:#3498db;"></span></a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#home" class="smoothScroll">Home</a></li>
+                    <li><a href="#about" class="smoothScroll"> About</a></li>
+                    <li><a href="#lastMaps" class="smoothScroll"> Last User Maps</a></li>
+                    <li><a href="#activeUser" class="smoothScroll"> Most Active User</a></li>
+                    <li><a href="#experiences" class="smoothScroll"> User Experiences</a></li>
+                    <li><a href="#userGuides" class="smoothScroll"> User Guides</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<section class="module parallax parallax-1" id="home" name="home">
+    <div class="container">
+        <h1><span class="icon icon-road"></span></h1>
+        <p>TravelMap</p>
+        <p>It's Time To Travel and Share</p>
+    </div>
+</section>
+
+<div id="greywrap">
+    <div class="row">
+        <div class="col-lg-4 callout">
+            <span class="icon icon-stack"></span>
+            <h2>Share your Travels</h2>
+            <p>Tell about your travel around the world </p>
+        </div>
+
+        <div class="col-lg-4 callout">
+            <span class="icon icon-eye"></span>
+            <h2>Exchange your experience</h2>
+            <p>Your experience will help other people which goes here </p>
+        </div>
+
+
+        <div class="col-lg-4 callout">
+            <span class="icon icon-heart"></span>
+            <h2>Don't forget your moments</h2>
+            <p>Its best place to keep your travel history </p>
+        </div>
+    </div>
+</div>
+
+
+<div class="container" id="about" name="about">
+    <div class="row white">
+        <br>
+        <h1 class="centered">This is a perfekt place for this</h1>
+        <hr>
+
+        <div class="col-lg-6">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+                vero eos et accusam.</p>
+        </div>
+
+        <div class="col-lg-6">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+                vero eos et accusam.</p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h1 class="centered">Search for Country Expirience</h1>
+    <p>orem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+        eirmod
+        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+    <form>
+        <div class="input-group input-group-lg">
+            <input type="text" class="form-control" placeholder="Search">
+            <div class="input-group-btn">
+                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+        </div>
+    </form>
+    <br>
+
+    <div class="container" id="lastMaps" name="lastMaps">
+        <br>
+        <div id="test" class="row white centered">
+           <!-- <h1 class="centered">LOOK THE LAST USER MAPS</h1>
+            <hr>
+            <br>
+            <br>-->
+
+        </div>
+
+        <div class="container" id="activeUser" name="activeUser">
+            <div class="row white">
+                <br>
+                <h1 class="centered">Most active Users</h1>
+                <hr>
+
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Username</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <p></p>
+
+        <section class="section-divider textdivider divider3">
+            <div class="container">
+                <button id="citatebtn"></button>
+                <h1>Citate of the Day</h1>
+                <hr>
+                <div class="container" id="citate">
+                </div>
+            </div>
+        </section>
+
+
+        <div class="container" id="experiences" name="experiences">
+            <br>
+            <div class="row">
+                <br>
+                <h1 class="centered">Last Countryptictures</h1>
+                <hr>
+                <br>
+                <br>
+            </div>
+            <div class="container">
+                <div class="row">
+
+
+                    <div class="col-md-4 ">
+                        <div class="grid mask">
+                            <figure>
+                                <img class="img-responsive" src="assets/img/userPicAlbum/pic1.jpg" alt="">
+                                <figcaption>
+                                    <h5>Last trip in Germany</h5>
+                                    <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Take a
+                                        Look</a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+
+
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                         aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"
+                                            aria-hidden="true">&times;</button>
+                                    <h4 class="modal-title">Last Trip in Germany</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p><img class="img-responsive" src="assets/img/userPicAlbum/pic1.jpg" alt="">
+                                    </p>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                                        eirmod
+                                        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                                        At
+                                        vero eos et accusam .</p>
+
+                                    <img class="img-responsive" src="assets/img/userPicAlbum/test.jpg"></li>
+                                    <img class="img-responsive" src="assets/img/userPicAlbum/test.jpg"></li>
+                                    <img class="img-responsive" src="assets/img/userPicAlbum/test.jpg"></li>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                         aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"
+                                            aria-hidden="true">&times;</button>
+                                    <h4 class="modal-title">Project Title</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p><img class="img-responsive" src="assets/img/userPicAlbum/pic1.jpg" alt="">
+                                    </p>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                                        eirmod
+                                        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                                        At
+                                        vero eos et accusam </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                         aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"
+                                            aria-hidden="true">&times;</button>
+                                    <h4 class="modal-title">Project Title</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p><img class="img-responsive" src="assets/img/userPicAlbum/pic1.jpg" alt="">
+                                    </p>
+                                    <p>g elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                                        aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                                        dolores et
+                                        ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+                                        dolo</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                         aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"
+                                            aria-hidden="true">&times;</button>
+                                    <h4 class="modal-title">Project Title</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p><img class="img-responsive" src="assets/img/userPicAlbum/pic1.jpg" alt="">
+                                    </p>
+                                    <p>g elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                                        aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                                        dolores et
+                                        ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+                                        dolo</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                         aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"
+                                            aria-hidden="true">&times;</button>
+                                    <h4 class="modal-title">Project Title</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p><img class="img-responsive" src="assets/img/userPicAlbum/pic1.jpg" alt="">
+                                    </p>
+                                    <p>g elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                                        aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                                        dolores et
+                                        ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+                                        dolo</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                         aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"
+                                            aria-hidden="true">&times;</button>
+                                    <h4 class="modal-title">Project Title</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p><img class="img-responsive" src="assets/img/userPicAlbum/pic1.jpg" alt="">
+                                    </p>
+                                    <p>g elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                                        aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                                        dolores et
+                                        ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+                                        dolo</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="grid mask">
+                            <figure>
+                                <img class="img-responsive" src="assets/img/userPicAlbum/pic2.jpg" alt="">
+                                <figcaption>
+                                    <h5>a Journey to Russia</h5>
+                                    <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Take a
+                                        Look</a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="grid mask">
+                            <figure>
+                                <img class="img-responsive" src="assets/img/userPicAlbum/pic3.jpg" alt="">
+                                <figcaption>
+                                    <h5>Belarus</h5>
+                                    <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Take a
+                                        Look</a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 ">
+                        <div class="grid mask">
+                            <figure>
+                                <img class="img-responsive" src="assets/img/userPicAlbum/pic4.jpg" alt="">
+                                <figcaption>
+                                    <h5>Expiriences Turkey</h5>
+                                    <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Take a
+                                        Look</a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-4">
+                        <div class="grid mask">
+                            <figure>
+                                <img class="img-responsive" src="assets/img/userPicAlbum/pic5.jpg" alt="">
+                                <figcaption>
+                                    <h5>USA</h5>
+                                    <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Take a
+                                        Look</a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-4">
+                        <div class="grid mask">
+                            <figure>
+                                <img class="img-responsive" src="assets/img/userPicAlbum/pic6.jpg" alt="">
+                                <figcaption>
+                                    <h5>A Trip to Afrika</h5>
+                                    <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Take a
+                                        Look</a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+            </div>
+        </div>
+
+        <div class="container" id="userGuides" name="userGuides">
+            <br>
+            <div class="row">
+                <br>
+                <h1 class="centered">WE ARE THE CITYGUIDES</h1>
+
+                <!--<label id="testlabel">Saransk</label>-->
+
+                <hr>
+                <br>
+                <br>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 blog-bg">
+                    <div class="col-lg-4 centered">
+                        <br>
+                        <p><img class="img img-circle"
+                                src="http://stalwartvalue.com/wp-content/uploads/2015/12/user.png" width="60px"
+                                height="60px"></p>
+                        <h4>User1</h4>
+                        <h5>Published Juni.25</h5>
+                    </div>
+                    <div class="col-lg-8 blog-content">
+                        <h2>My Travel in Russia</h2>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+                            accusam
+                            et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                            diam nonumy eirmod tempor</p>
+                        <p>ILorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+                            accusam
+                            et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                            diam nonumy eirmod tempor.</p>
+                        <p><a href="#" class="icon icon-link"> Read More</a></p>
+                        <br>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 blog-bg">
+                    <div class="col-lg-4 centered">
+                        <br>
+                        <p><img class="img img-circle"
+                                src="http://stalwartvalue.com/wp-content/uploads/2015/12/user.png" width="60px"
+                                height="60px"></p>
+                        <h4>User2</h4>
+                        <h5>Published Sep 15.</h5>
+                    </div>
+                    <div class="col-lg-8 blog-content">
+                        <h2>A nice WE in Paris</h2>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+                            accusam
+                            et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                            diam nonumy eirmod tempor</p>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+                            accusam
+                            et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                            diam nonumy eirmod tempor</p>
+                        <p><a href="#" class="icon icon-link"> Read More</a></p>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+        </div>
+
+
+        <div id="sidebar">
+            <button data-toggle="modal" data-target="#inputModal" class="ControlBtn" id="addBtn"></button>
+            <br>
+            <p></p>
+            <button onclick="" class="ControlBtn" id="findBtn"></button>
+            <br>
+            <p></p>
+            <button onclick="javascript:history.go(0)" class="ControlBtn" id="updateBtn"></button>
+            <br>
+
+
+        </div>
+
+        <div class="container">
+
+            <div class="modal fade" id="inputModal" role="dialog">
+                <div class="modal-dialog">
+
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Dateneingabe</h4>
+                        </div>
+                        <div class="modal-body">
+
+
+                            <button id="btnfill" class="ControlBtn" onclick="/*fill()*/"> Daten Füllen</button>
+                            <p></p>
+                            <form id="travelInfo" onsubmit="/*return validate(this)*/" method="post">
+
+                                <h2>Gib deine Reisedaten ein!</h2>
+                                <div class="form-group">
+                                    <label for="username">Name:</label>
+                                    <input type="text" class="form-control" id="username" name="username"
+                                           placeholder="Enter username">
+                                    <!--<label class="validationCheck" id="cityCheck"></label>-->
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="country">Land:</label>
+                                    <input type="text" class="form-control" id="country" name="country"
+                                           placeholder="Enter country">
+                                    <label class="validationCheck" id="countryCheck"></label>
+
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="city">Stadt:</label>
+                                    <input type="text" class="form-control" id="city" name="city"
+                                           placeholder="Enter country">
+                                    <label class="validationCheck" id="cityCheck"></label>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="fromDate">Von:</label>
+                                    <input type="text" class="form-control" name="fromDate" id="fromDate"
+                                           placeholder="Enter date">
+                                    <label class="validationCheck" id="fromDateCheck"></label>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="tilDate">Bis:</label>
+                                    <input type="text" class="form-control" name="tilDate" id="tilDate"
+                                           placeholder="Enter date">
+                                    <label class="validationCheck" id="tilDateCheck"></label>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="email">E-mail:</label>
+                                    <input type="text" class="form-control" name="email" id="email"
+                                           placeholder="Enter email">
+                                    <label class="validationCheck" id="emailCheck"></label>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="userNotes">Notizen</label><br>
+                                    <textarea name="userNotes" id="userNotes" placeholder="Deine Momente" rows="15"
+                                              cols="50"></textarea>
+                                </div>
+
+
+                                <p><input id="submitform" type="submit" name="submit" class="ControlBtn"
+                                          value="Zu der Sammlung hinzufügen"/></p>
+
+                                </button>
+
+                            </form>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="ControlBtn" data-dismiss="modal">Close</button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+<!------------------------------------------------------------------------------------------------------------------->
+
+        <div class="container">
+
+            <div class="modal fade" id="editModal" role="dialog">
+                <div class="modal-dialog">
+
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Modal Header</h4>
+                        </div>
+                        <div class="modal-body">
+
+
+                            <button id="btnfill" class="ControlBtn" onclick="/*fill()*/"> Daten Füllen</button>
+                            <p></p>
+                            <form id="travelInfo" onsubmit="/*return validate(this)*/" method="post">
+
+                                <h2>Gib deine Reisedaten ein!</h2>
+                                <div class="form-group">
+                                    <label for="usernameedit">Name:</label>
+                                    <input type="text" class="form-control" id="usernameedit" name="usernameedit"
+                                           placeholder="Enter username">
+                                    <!--<label class="validationCheck" id="cityCheck"></label>-->
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="countryedit">Land:</label>
+                                    <input type="text" class="form-control" id="countryedit" name="countryedit"
+                                           placeholder="Enter country">
+                                    <label class="validationCheck" id="countryCheck"></label>
+
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="cityedit">Stadt:</label>
+                                    <input type="text" class="form-control" id="cityedit" name="cityedit"
+                                           placeholder="Enter country">
+                                    <label class="validationCheck" id="cityCheck"></label>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="fromDateedit">Von:</label>
+                                    <input type="text" class="form-control" name="fromDateedit" id="fromDateedit"
+                                           placeholder="Enter date">
+                                    <label class="validationCheck" id="fromDateCheck"></label>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="tilDateedit">Bis:</label>
+                                    <input type="text" class="form-control" name="tilDateedit" id="tilDateedit"
+                                           placeholder="Enter date">
+                                    <label class="validationCheck" id="tilDateCheck"></label>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="email">E-mail:</label>
+                                    <input type="text" class="form-control" name="email" id="email"
+                                           placeholder="Enter email">
+                                    <label class="validationCheck" id="emailCheck"></label>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="userNotesedit">Notizen</label><br>
+                                    <textarea name="userNotesedit" id="userNotesedit" placeholder="Deine Momente" rows="15"
+                                              cols="50"></textarea>
+                                </div>
+
+
+                                <p><input id="editform" type="submit" name="editform" class="ControlBtn"
+                                          value="Korrektur"/></p>
+
+                                </button>
+
+                            </form>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="ControlBtn" data-dismiss="modal">Close</button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!------------------------------------------------------------------------------------------------------------------->
+
+
+        <a href="#" class="scrollToTop">Scroll To Top</a>
+
+        <div id="footerwrap">
+            <div class="container">
+                <h4>Created by Samed Sulanc, Wadim Lewin</h4>
+                <h4>MmE1</h4>
+            </div>
+
+            <div id="test1" class="container">
+            </div>
+
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/retina.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="assets/js/smoothscroll.js"></script>
+    <script type="text/javascript" src="assets/js/jquery-func.js"></script>
+
+
+
+</body>
+</html>
